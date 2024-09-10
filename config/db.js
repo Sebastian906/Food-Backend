@@ -6,10 +6,10 @@ dotenv.config();
 export const connectDB = async () => {
     try {
         await mongoose.connect(process.env.DB_LINK, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        serverSelectionTimeoutMS: 5000,  // Aumenta el tiempo de espera (5000 ms = 5 segundos)
-  socketTimeoutMS: 45000,  // Tiempo de espera para los sockets (45000 ms = 45 segundos)
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            serverSelectionTimeoutMS: 5000,  // Aumenta el tiempo de espera (5000 ms = 5 segundos)
+            socketTimeoutMS: 45000,  // Tiempo de espera para los sockets (45000 ms = 45 segundos)
         });
         console.log('Se conectó a MongoDB');
     } catch (error) {
